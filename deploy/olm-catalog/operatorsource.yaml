@@ -1,0 +1,15 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorSource
+metadata:
+  name: ibm-block-csi-operator
+  labels:
+    app.kubernetes.io/name: ibm-block-csi-operator
+    app.kubernetes.io/instance: ibm-block-csi-operator
+    app.kubernetes.io/managed-by: ibm-block-csi-operator
+    release: ibm-block-csi-operator
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-block-csi-operator Operator Catalog
+  type: appregistry
+  endpoint: https://quay.io/cnr
+  registryNamespace: mattlevan

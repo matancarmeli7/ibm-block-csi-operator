@@ -1,11 +1,12 @@
-apiVersion: v1
-kind: ServiceAccount
+apiVersion: operators.coreos.com/v1alpha2
+kind: OperatorGroup
 metadata:
-  name: ibm-block-csi-operator
-  namespace: default
+  name: ibm-block-csi-operator-group
   labels:
-    product: ibm-block-csi-driver
-    csi: ibm
     app.kubernetes.io/name: ibm-block-csi-operator
     app.kubernetes.io/instance: ibm-block-csi-operator
     app.kubernetes.io/managed-by: ibm-block-csi-operator
+    release: ibm-block-csi-operator
+spec:
+  targetNamespaces:
+  - DYNAMIC_NAMESPACE
