@@ -43,13 +43,6 @@ spec:
           spec:
             description: IBMBlockCSISpec defines the desired state of IBMBlockCSI
             properties:
-              license:
-                properties:
-                  accept:
-                    type: boolean
-                required:
-                - accept
-                type: object
               controller:
                 description: IBMBlockCSIControllerSpec defines the desired state of
                   IBMBlockCSIController
