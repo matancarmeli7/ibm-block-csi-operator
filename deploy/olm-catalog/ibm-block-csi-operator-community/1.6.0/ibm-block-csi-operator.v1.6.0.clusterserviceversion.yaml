@@ -411,6 +411,8 @@ spec:
           - description: License Acceptance.
             displayName: License Acceptance
             path: license.accept
+            value:
+              - false
             x-descriptors:
               - 'urn:alm:descriptor:com.tectonic.ui:booleanSwitch'
         statusDescriptors:
