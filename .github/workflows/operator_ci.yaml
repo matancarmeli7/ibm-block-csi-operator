@@ -1,4 +1,4 @@
-name: Operator Build
+name: Operator Builds
 on:
   push:
     branches:
