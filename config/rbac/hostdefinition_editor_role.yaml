@@ -1,0 +1,24 @@
+# permissions for end users to edit hostdefinitions.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hostdefinition-editor-role
+rules:
+- apiGroups:
+  - csi.ibm.com
+  resources:
+  - hostdefinitions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - csi.ibm.com
+  resources:
+  - hostdefinitions/status
+  verbs:
+  - get
