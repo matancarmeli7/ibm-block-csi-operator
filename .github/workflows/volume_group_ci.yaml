@@ -38,8 +38,8 @@ jobs:
           platforms: linux/amd64,linux/ppc64le,linux/s390x
           push: false
           tags: |
-            ${{ secrets.CSIBLOCK_DOCKER_REGISTRY_USERNAME }}/ibm-block-csi-${{ matrix.image_type }}:${{ needs.prepare_env.outputs.operator_specific_tag_for_test }}
-            ${{ secrets.CSIBLOCK_DOCKER_REGISTRY_USERNAME }}/ibm-block-csi-${{ matrix.image_type }}:${{ needs.prepare_env.outputs.image_branch_tag }}
+            ${{ secrets.CSIBLOCK_DOCKER_REGISTRY_USERNAME }}/ibm-block-csi-${{ matrix.image_type }}:test_volume_group
+            ${{ secrets.CSIBLOCK_DOCKER_REGISTRY_USERNAME }}/ibm-block-csi-${{ matrix.image_type }}:test_volume_group2
           file: build/Dockerfile.${{ matrix.image_type }}
           cache-from: type=local,src=/tmp/.buildx-${{ matrix.image_type }}
           cache-to: type=local,dest=/tmp/.buildx-new-${{ matrix.image_type }}
